@@ -18,12 +18,13 @@ This dataset is a part of [pyThaiNLP](https://github.com/PyThaiNLP/) Thai text [
 * `ไอซีที` - ICT
 * `การศึกษา` - education
 
-We provide 3 benchmarks for 12-topic multi-label classification of `prachathai-67k`: [fastText](https://github.com/facebookresearch/fastText), LinearSVC and [ULMFit](https://github.com/cstorm125/thai2fit). In all cases, we first finetune the embeddings using all data. The data is then split into train, validation and test sets at 70/10/20 split. The benchmark numbers are based on the test set. Performance metrics are macro-averaged accuracy and F1 score. See [classification.ipynb](https://github.com/PyThaiNLP/prachathai-67k/blob/master/classification.ipynb) for more information.
+We provide 3 benchmarks for 12-topic multi-label classification of `prachathai-67k`: [fastText](https://github.com/facebookresearch/fastText), LinearSVC, [ULMFit](https://github.com/cstorm125/thai2fit), and [Multilingual Universal Sentence Encoder](https://tfhub.dev/google/universal-sentence-encoder-multilingual/3) . In all cases, we first finetune the embeddings using all data. The data is then split into train, validation and test sets at 70/10/20 split. The benchmark numbers are based on the test set. Performance metrics are macro-averaged accuracy and F1 score. See [classification.ipynb](https://github.com/PyThaiNLP/prachathai-67k/blob/master/classification.ipynb) for more information.
 
 | model     | macro-accuracy | macro-F1 |
 |-----------|----------------|----------|
 | fastText  | 0.9302         | 0.5529   |
 | LinearSVC | 0.513277       | 0.552801 |
 | **ULMFit**    | **0.948737**       | **0.744875**	 |
+| [USE](https://tfhub.dev/google/universal-sentence-encoder-multilingual/3)    | 0.856091    | 0.696172	 |
 
 ※ Note that Prachathai.com is a left-leaning, human-right-focused news site, and thus unusual news labels such as human rights and quality of life.
